@@ -1,0 +1,21 @@
+﻿@model AyealLibrary.Models.Entity.TblCategories
+@{
+    ViewBag.Title = "CategoryGet";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("CategoryUpdate", "Category", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-control">
+        @Html.LabelFor(c => c.Id)
+        @Html.TextBoxFor(c => c.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.Name)
+        @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+    </div>
+    <div style="margin:5px">
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+
